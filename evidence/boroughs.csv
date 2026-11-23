@@ -1,0 +1,17 @@
+month,borough,trips
+2025-01,Manhattan,3015042
+2025-01,Queens,284234
+2025-01,Brooklyn,61389
+2025-01,Bronx,13644
+2025-01,Unknown,7715
+2025-01,N/A,604
+2025-01,Staten Island,230
+2025-01,EWR,79
+2025-02,Manhattan,3074493
+2025-02,Queens,280162
+2025-02,Brooklyn,90528
+2025-02,Bronx,20109
+2025-02,Unknown,7065
+2025-02,N/A,521
+2025-02,Staten Island,280
+2025-02,EWR,76

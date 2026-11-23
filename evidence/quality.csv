@@ -1,0 +1,9 @@
+month,decision,trip_count
+2025-01,accepted,3382937
+2025-01,invalid_distance,90196
+2025-01,invalid_duration,2071
+2025-01,outside_source_month,22
+2025-02,accepted,3473234
+2025-02,invalid_distance,99098
+2025-02,invalid_duration,5180
+2025-02,outside_source_month,31
