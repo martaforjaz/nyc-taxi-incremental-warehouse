@@ -2,7 +2,8 @@
 
 A SQL-first warehouse that audits monthly NYC yellow taxi exports, loads each batch once, and links accepted trips to the official taxi zone lookup. The reference run covers January and February 2025.
 
-![Four connected phases: source acquisition, quality checks, incremental load, and evidence.](figures/overview.svg)
+![Four connected phases: source acquisition, quality checks, incremental load, and evidence.](figures/paper-workflow.svg)
+The vector figures are available as PDF in [figures/](figures/). With Python, NumPy and Matplotlib installed, run `python paper_figures.py` to regenerate them. The visual conventions follow [figures4papers](https://github.com/ChenLiu-1996/figures4papers).
 
 [Run locally](#run-locally) · [Data contract](#data-contract) · [Evidence](evidence/) · [BigQuery benchmark](bigquery/)
 
@@ -10,9 +11,10 @@ A SQL-first warehouse that audits monthly NYC yellow taxi exports, loads each ba
 
 The pipeline read **7,052,769** source rows and accepted **6,856,171**. It rejected **196,598** under the documented rules. Invalid distance was the largest rejection category in both months. Manhattan accounted for **88.8%** of accepted pickups across the two months.
 
-![Rejection rates per 10,000 source rows for January and February.](figures/quality.svg)
+![Rejection rates per 10,000 source rows for January and February.](figures/paper-results.svg)
 
-![Number of accepted pickups by borough for January and February.](figures/boroughs.svg)
+Panel a reports rejection rates. Panel b shows accepted pickups in the three leading boroughs. Panel c compares measured BigQuery bytes for the same query.
+
 
 ## Run locally
 
