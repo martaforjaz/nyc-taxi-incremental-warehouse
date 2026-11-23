@@ -1,5 +1,7 @@
 # NYC Taxi Data Quality and Incremental Warehouse
 
+![NYC taxi warehouse project illustration.](figures/project-illustration.svg)
+
 A SQL-first warehouse that audits monthly NYC yellow taxi exports, loads each batch once, and links accepted trips to the official taxi zone lookup. The reference run covers January and February 2025.
 
 ![Four connected phases: source acquisition, quality checks, incremental load, and evidence.](figures/paper-workflow.svg)
