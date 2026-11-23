@@ -41,4 +41,6 @@ Source: [NYC Taxi & Limousine Commission Trip Record Data](https://www.nyc.gov/s
 
 ## BigQuery benchmark
 
-The optional runner loads the same accepted records into two temporary table layouts and compares a one-day query with DuckDB. It prints dry-run estimates and measured bytes for both layouts when executed with an authenticated Google Cloud project. [Benchmark setup and status](bigquery/README.md)
+Daily partitioning reduced the bytes processed by the one-day query by **98.22%**, from **109,698,736 bytes** on the unpartitioned table to **1,950,416 bytes** on the partitioned table. Both BigQuery queries ran with caching disabled and returned **121,901 trips** and a mean distance of **6.4761 miles**, matching DuckDB.
+
+The sandbox run applied the same date offset to both tables to keep historical partitions within the sandbox retention window. The one-day grouping and trip values were preserved. [Run evidence and job IDs](evidence/bigquery-benchmark.json) · [Reproduce the benchmark](bigquery/README.md)
